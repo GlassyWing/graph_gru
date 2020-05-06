@@ -64,7 +64,7 @@ class GraphGRUCell(nn.Module):
         combined_can = self.graph_can(combined)
         can = torch.tanh(combined_can)
 
-        hx_next = (1. - update_gate) * hx_prev + update_gate * can
+        hx_next = (1. - update_gate) * weighted_hx_prev + update_gate * can
         return hx_next
 
 
