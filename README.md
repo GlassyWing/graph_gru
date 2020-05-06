@@ -32,3 +32,21 @@ output, hidden = ggru(input)
 print(output.shape)     # (1, 10, 2, 8)
 print(hidden.shape)     # (2, 1, 2, 8)
 ```
+
+## application scenario
+
+There is a wide range of applications. Here is an example of using it for precipitation forecast. Specifically, the precipitation value of a monitoring station in the next 20 days is predicted by the precipitation records of more than 2,000 monitoring stations nationwide in the past 30 days. The following Some effects are shown:
+
+<img src="assets/pre_forecast_1.png">
+
+<img src="assets/pre_forecast_2.png">
+
+<img src="assets/pre_forecast_3.png">
+
+<img src="assets/pre_forecast_4.png">
+
+Looks good.
+
+## conclusion
+
+Graph neural network has powerful state representation capabilities, and rnn has powerful sequence prediction capabilities, To a certain extent, GraphGRU can be regarded as learning high-dimensional spatial information through graph convolution. Unlike CNN, graph convolution can process data of any shape, which gives a wide range of applications. Therefore, the effect of graph sequence prediction mostly depends on the effect of graph neural network.
